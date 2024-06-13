@@ -1,1 +1,42 @@
-hello
+<app-header />
+<!-- // <app-user></app-user> -->
+<main>
+  <ul>
+    @for(user of users;track user.id){
+    <app-user
+      [user]="user"
+      (selecteduser)="Onselecteduserparent($event)"
+    (mouse)="Onselecteduserparent($event)" 
+    [selecteduserName]="selecteduserid===user.id"
+    ></app-user>
+    }
+    <!-- <li id="users" ngFor="let user of users">
+            <app-user [us*er]="user"  (selecteduser)="Onselecteduserparent($event)"></app-user>
+        </li> -->
+    <!-- <li id="users">
+            <app-user [user]="users[1]" (selecteduser)="Onselecteduserparent($event)"></app-user>
+        </li>
+        <li id="users">
+            <app-user [user]="users[2]" (selecteduser)="Onselecteduserparent($event)"></app-user>
+        </li>
+        <li id="users">
+            <app-user [user]="users[3]" (selecteduser)="Onselecteduserparent($event)"></app-user>
+        </li>
+        <li id="users">
+            <app-user [user]="users[4]" (selecteduser)="Onselecteduserparent($event)"></app-user>
+        </li> -->
+  </ul>
+  @if(selecteduserid){
+    <app-task-component [name]="selectedUseridParent?.name" [Selectuserid]="selectedUseridParent?.id" ></app-task-component>
+    }
+    @else {
+        <p>Please Select the user</p>
+    }
+  <!-- <app-task-component
+    *ngIf="selecteduserid; else nouser"
+    [name]="selectedUseridParent!.name"
+  ></app-task-component>
+  <ng-template #nouser>
+    <p>please Select user</p>
+  </ng-template> -->
+</main>
