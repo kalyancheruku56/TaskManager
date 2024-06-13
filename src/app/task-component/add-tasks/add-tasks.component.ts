@@ -1,5 +1,4 @@
 import { Component, EventEmitter, Output, inject, signal,Input } from '@angular/core';
-import { FormsModule, NgModel } from '@angular/forms';
 import { taskService } from '../Task.service';
 interface submitArray {
   title:String,
@@ -8,8 +7,8 @@ interface submitArray {
 }
 @Component({
   selector: 'app-add-tasks',
-  standalone: true,
-  imports: [FormsModule],
+  // standalone: true,
+  // imports: [FormsModule],
   templateUrl: './add-tasks.component.html',
   styleUrl: './add-tasks.component.css'
 })

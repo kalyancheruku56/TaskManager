@@ -1,6 +1,4 @@
 import { Component,EventEmitter,Input, Output, inject } from '@angular/core';
-import { CardComponent } from '../../ui/card/card.component';
-import { DatePipe } from '@angular/common';
 import { taskService } from '../Task.service';
 //import{SpecFicTask} from './user-task.model'
 interface SpecFicTask {
@@ -12,8 +10,8 @@ interface SpecFicTask {
 }
 @Component({
   selector: 'app-user-tasks',
-  standalone: true,
-  imports: [CardComponent,DatePipe],
+  // standalone: true,
+  // imports: [],
   templateUrl: './user-tasks.component.html',
   styleUrl: './user-tasks.component.css'
 })

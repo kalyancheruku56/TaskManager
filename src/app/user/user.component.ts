@@ -4,8 +4,7 @@ import { DUMMY_USERS } from './dummy-users';
 // const randomeindex = Math.floor(Math.random()*DUMMY_USERS.length)
 @Component({
   selector: 'app-user',
-  standalone: true,
-  imports: [],
+  //standalone: true,
   templateUrl: './user.component.html',
   styleUrl: './user.component.css'
 })

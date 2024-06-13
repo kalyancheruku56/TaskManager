@@ -54,7 +54,7 @@ export class taskService{
       }
       completeTask(id:String){
         this.tasks=this.tasks.filter((task)=>task.id!==id)
-     
+     this.savetasks()
       }
       savetasks(){
         localStorage.setItem("tasks",JSON.stringify(this.tasks))
